@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="registration-form">
+        <div class="top-bar">
+          <img src="images/icon.png" alt="icon" class="icon" />
+          <h2>Register</h2>
+        </div>
+        <div class="steps-container">
+          <div class="step active-step" id="step-1-indicator">
+            <span class="step-number">1</span>
+          </div>
+          <div class="line"></div>
+          <div class="step" id="step-2-indicator">
+            <span class="step-number">2</span>
+          </div>
+          <div class="line"></div>
+          <div class="step" id="step-3-indicator">
+            <span class="step-number">3</span>
+          </div>
+        </div>
+
+        <div class="form-step" id="step-1">
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            id="fullname"
+            placeholder="Enter your full name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="your.email@example.com"
+            required
+          />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="......" required />
+          <small class="password-help-text"
+            >Must be at least 8 characters</small
+          >
+
+          <label for="confirm">Confirm Password</label>
+          <input type="password" id="confirm" placeholder="......" required />
+
+          <div class="button-wrapper">
+            <button type="button" class="next-btn" data-target="step-2">
+              Next
+            </button>
+            <p class="note">
+              @2025 Gofamint International annual convection gospel city
+              ogunmakin.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-step hidden" id="step-2">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+            required
+          />
+
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required />
+
+          <h3>Additional Information</h3>
+          <p>Is this your first time attending?</p>
+          <div class="radio-group">
+            <input type="radio" id="yes" name="updates" value="yes" required />
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="updates" value="no" required />
+            <label for="no">No</label>
+          </div>
+
+          <div id="years-attending-group" class="hidden">
+            <label for="years-attending"
+              >How many years have you been attending?</label
+            >
+            <input
+              type="number"
+              id="years-attending"
+              min="1"
+              placeholder="Enter number of years"
+            />
+          </div>
+
+          <div class="button-wrapper">
+            <button type="button" class="prev-btn" data-target="step-1">
+              Previous
+            </button>
+            <button type="button" class="next-btn" data-target="step-3">
+              Continue
+            </button>
+          </div>
+        </div>
+
+        <div class="form-step hidden" id="step-3">
+          <div class="success-message">
+            <img
+              src="images/congrats-icon.png"
+              alt="Celebration icon"
+              class="congrats-icon"
+            />
+            <h2 class="congratulations-heading">Congratulations!</h2>
+            <p>
+              You are now registered for the 2025 annual convention. We look
+              forward to seeing you there!
+            </p>
+          </div>
+          <div class="confetti-container"></div>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
